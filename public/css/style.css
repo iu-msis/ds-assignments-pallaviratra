@@ -1,0 +1,33 @@
+body { 
+    background: url(../img/bg2.jpg) no-repeat center fixed; 
+    
+}
+
+#contact{
+    font-weight: bold;
+}
+
+.btn1 {
+    background-color: #990000;
+    color: white;
+}
+  
+.btn1:active, .btn1:hover, .btn1:focus {
+    background-color: #990000;
+    color: goldenrod;
+}  
+
+.thead {
+    background-color: #990000;
+    color: white;
+}
+
+a:link {
+    color: #990000;
+}
+
+.main_head{
+    background-color: #990000;
+    color: white;
+    text-align: right;
+}
