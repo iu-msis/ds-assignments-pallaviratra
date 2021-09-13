@@ -10,8 +10,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
-    
-    <title>Harry Potter-Basic HTML</title>
+
+    <title>Harry Potter-DS HW</title>
   </head>
   <body>
     <div class='container-fluid'>
@@ -36,16 +36,14 @@
       <br>
       <div class="container-fluid">
         <h4>Here is a list of books that I want to read!</h4>
-        <table class="table table-hover table-responsive-sm">
-            <thead class="thead-dark">
-              <tr>
+        <table data-sortable class="table table-hover table-responsive-sm">
+            <thead id='booksTable'>
                 <th scope="col">Title</th>
                 <th scope="col">Author(s)</th>
                 <th scope="col">Year published</th>
                 <th scope="col">Publisher</th>
                 <th scope="col">Page count</th>
                 <th scope="col">MSRP</th>
-              </tr>
             </thead>
             <tbody>
               <tr>
@@ -118,3 +116,8 @@
           </form> 
       </div>
     </div>
+    <!-- Table sort plugin from https://github.hubspot.com/sortable/docs/welcome/-->
+    <script src="sortable/js/sortable.min.js"></script>
+    <link rel="stylesheet" href="sortable/css/sortable-theme-bootstrap.css" />
+  </body>
+</html>

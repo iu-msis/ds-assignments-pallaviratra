@@ -17,7 +17,7 @@ body {
     color: goldenrod;
 }  
 
-.thead {
+#booksTable{
     background-color: #990000;
     color: white;
 }
