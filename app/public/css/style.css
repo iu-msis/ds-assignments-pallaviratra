@@ -17,6 +17,10 @@ body {
     color: goldenrod;
 }  
 
+table, th, td {
+    border: 1px solid black;
+}
+
 #booksTable{
     background-color: #990000;
     color: white;
