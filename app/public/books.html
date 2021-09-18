@@ -4,22 +4,22 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- Custom CSS-->
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
 
-    <title>Harry Potter-DS HW</title>
+    <title>Random User-DS HW</title>
   </head>
   <body>
     <div class='container-fluid'>
-        <nav class="navbar sticky-top justify-content-center navbar-expand-lg navbar-dark" style="background-color: #990000;">
+        <nav class="navbar sticky-top justify-content-center navbar-expand-lg navbar-dark navBg">
             <a class="navbar-brand" href="index.html">
               <img src="img/hp.jpg" width="35" height="35" class="d-inline-block align-top" alt="" loading="lazy">
               <!-- Image source: https://1000logos.net/harry-potter-logo/ -->
-              Harry Potter
+              DS Random user
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myMenu">
               <span class="navbar-toggler-icon"></span>
@@ -27,27 +27,28 @@
             <div class="collapse navbar-collapse" id="myMenu">
               <div class="navbar-nav mr-auto">
                   <a class="nav-link" href="index.html">Home</a>
-                  <a class="nav-link active" href="books.html">Books<span class="sr-only">(current)</span></a>
+                  <a class="nav-link active" href="books.html">Books<span class="sr-only"></span></a>
                   <a class="nav-link" href="contact.html">Contact</a>
               </div>
             </div>
         </nav>
       <header class='main_head' >Created by: Pallavi Ratra</header>
-      <br>
-      <div class="container-fluid">
+      <div class="container-fluid" id="booksPage">
         <h4>Here is a list of books that I want to read!</h4>
         <table data-sortable class="table table-hover table-responsive-sm">
             <thead id='booksTable'>
+              <tr>
                 <th scope="col">Title</th>
                 <th scope="col">Author(s)</th>
                 <th scope="col">Year published</th>
                 <th scope="col">Publisher</th>
                 <th scope="col">Page count</th>
                 <th scope="col">MSRP</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">The Book of Charms & Spells</th>
+                <td>The Book of Charms & Spells</td>
                 <td>Samuel Journeux</td>
                 <td>1871</td>
                 <td>Bloomsbury</td>
@@ -55,7 +56,7 @@
                 <td>£40</td>
               </tr>
               <tr>
-                <th scope="row">Quidditch Through the Ages</th>
+                <td>Quidditch Through the Ages</td>
                 <td>Kennilworthy Whisp</td>
                 <td>1902</td>
                 <td>Bloomsbury</td>
@@ -63,7 +64,7 @@
                 <td>£30</td>
               </tr>
               <tr>
-                <th scope="row">Magical Me</th>
+                <td>Magical Me</td>
                 <td>Gilderoy Lockhart</td>
                 <td>1992</td>
                 <td>Bloomsbury</td>
@@ -71,7 +72,7 @@
                 <td>£55</td>
               </tr>
               <tr>
-                <th scope="row">The Life and Lies of Albus Dumbledore</th>
+                <td>The Life and Lies of Albus Dumbledore</td>
                 <td>Rita Skeeter</td>
                 <td>1997</td>
                 <td>Bloomsbury</td>
@@ -80,42 +81,41 @@
               </tr>
             </tbody>
         </table>
-        <br>
       </div>
-      <div class="container-fluid">
+      <div class="container-fluid" id="booksPage">
         <h4>Have a suggestion? Add the book details here!</h4>
         <form>
             <div class="row">
               <div class="col">
                 <input type="text" class="form-control" placeholder="Title">
               </div>
-              <div class="col">
+              <div class="col" id="form">
                 <input type="text" class="form-control" placeholder="Author(s)">
-                <br>
               </div>
             </div>
             <div class="row">
                 <div class="col">
                   <input type="number" class="form-control" placeholder="Year published">
                 </div>
-                <div class="col">
+                <div class="col" id="form">
                   <input type="text" class="form-control" placeholder="Publisher">
-                  <br>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                   <input type="number" class="form-control" placeholder="Page count">
                 </div>
-                <div class="col">
+                <div class="col" id="form">
                   <input type="number" class="form-control" placeholder="MSRP">
-                  <br>
                 </div>
             </div>
             <button class="btn btn1" type="submit">Submit form</button>
           </form> 
       </div>
     </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
     <!-- Table sort plugin from https://github.hubspot.com/sortable/docs/welcome/-->
     <script src="sortable/js/sortable.min.js"></script>
     <link rel="stylesheet" href="sortable/css/sortable-theme-bootstrap.css" />

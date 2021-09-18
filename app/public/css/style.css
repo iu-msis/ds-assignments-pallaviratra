@@ -3,7 +3,34 @@ body {
     
 }
 
-#contact{
+.row {
+    padding-top: 20px;
+}
+
+.navBg{
+    background-color: #990000;
+}
+#profileImg{
+    padding-top: 80px;
+}
+
+#booksPage{
+    padding-top: 20px;
+}
+
+#form{
+    padding-bottom: 20px;
+}
+
+#contactCol{
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+#contactPage{
+    padding-top: 20px;
+}
+#heading{
     font-weight: bold;
 }
 
