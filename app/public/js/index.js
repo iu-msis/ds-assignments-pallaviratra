@@ -1,7 +1,12 @@
 const User = {
     data() {
       return {
-        "user": {},
+        "user": {
+            name: {},
+            picture: {},
+            dob: {},
+            location: {},
+        },
         }
     },
 
