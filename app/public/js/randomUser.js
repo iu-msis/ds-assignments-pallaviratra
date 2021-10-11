@@ -6,7 +6,7 @@ const User = {
             picture: {},
             dob: {},
             location: {},
-        },
+        }
         }
     },
 
@@ -27,9 +27,9 @@ const User = {
             .catch( (err) => {
                 console.error(err);
             })
-        }
+        }    
     },
-
+    
     created(){
         this.fetchUserData();
     }
