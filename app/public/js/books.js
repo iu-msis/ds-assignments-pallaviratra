@@ -1,15 +1,8 @@
 const Book = {
     data() {
       return {
-        "books": {
-            id: {},
-            title: {},
-            author: {},
-            year: {},
-            publisher: {},
-            pages: {},
-            msrp: {},
-        }
+        "books": [],
+        "bookForm": {} 
         }
     },
 
@@ -28,6 +21,25 @@ const Book = {
             .catch( (err) => {
                 console.error(err);
             })
+        },
+        postNewBook(evt) {
+            // this.offerForm.studentId = this.selectedStudent.id;  
+            console.log("Posting!", this.bookForm);
+            //alert("Created");
+      
+            fetch('api/books/add.php', {
+              method: 'POST',
+              body: JSON.stringify(this.bookForm),
+              headers: {
+                "Content-type": "application/json; charset=utf-8"
+              }
+            })
+            .then( response => response.json() )
+            .then( json => {
+              console.log("Returned from post:", json);
+              this.books = json;
+              this.bookForm = {};
+            });
         }
     },
 
