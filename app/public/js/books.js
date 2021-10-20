@@ -23,11 +23,7 @@ const Book = {
             })
         },
         postNewBook(evt) {
-            // this.offerForm.studentId = this.selectedStudent.id;  
-            console.log("Posting!", this.bookForm);
-            //alert("Created");
-      
-            fetch('api/books/add.php', {
+            fetch('api/books/create.php', {
               method: 'POST',
               body: JSON.stringify(this.bookForm),
               headers: {
@@ -36,7 +32,6 @@ const Book = {
             })
             .then( response => response.json() )
             .then( json => {
-              console.log("Returned from post:", json);
               this.books = json;
               this.bookForm = {};
             });

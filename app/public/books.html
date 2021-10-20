@@ -41,7 +41,6 @@
         <table data-sortable class="table table-hover table-responsive-sm">
             <thead id='booksTable'>
               <tr>
-                <!-- <th scope="col">S.No.</th> -->
                 <th scope="col">Title</th>
                 <th scope="col">Author(s)</th>
                 <th scope="col">Year published</th>
@@ -52,7 +51,6 @@
             </thead>
             <tbody>
               <tr v-for="b in books">
-                <!-- <td>{{b.id}}</td> -->
                 <td>{{b.title}}</td>
                 <td>{{b.author}}</td>
                 <td>{{b.year_pub}}</td>
@@ -66,35 +64,35 @@
         <div class="container-fluid" id="booksPage">
           <h4>Have a suggestion? Add the book details here!</h4>
           <form v-on:submit.prevent="postNewBook">
-              <div class="row">
-                <!-- <div class="col">
-                  <input type="text" v-model="bookForm.id" class="form-control" placeholder="ID" id="title">
-                </div> -->
+            <div class="row">
+              <!-- <div class="col">
+                <input type="text" v-model="bookForm.id" class="form-control" placeholder="ID" id="title">
+              </div> -->
+              <div class="col">
+                <input type="text" v-model="bookForm.title" class="form-control" placeholder="Title" id="title">
+              </div>
+              <div class="col" id="form">
+                <input type="text" v-model="bookForm.author" class="form-control" placeholder="Author(s)" id="author">
+              </div>
+            </div>
+            <div class="row">
                 <div class="col">
-                  <input type="text" v-model="bookForm.title" class="form-control" placeholder="Title" id="title">
+                  <input type="number" v-model="bookForm.year_pub" class="form-control" placeholder="Year published" id="year">
                 </div>
                 <div class="col" id="form">
-                  <input type="text" v-model="bookForm.author" class="form-control" placeholder="Author(s)" id="author">
+                  <input type="text" v-model="bookForm.publisher" class="form-control" placeholder="Publisher" id="publisher">
                 </div>
-              </div>
-              <div class="row">
-                  <div class="col">
-                    <input type="number" v-model="bookForm.year_pub" class="form-control" placeholder="Year published" id="year">
-                  </div>
-                  <div class="col" id="form">
-                    <input type="text" v-model="bookForm.publisher" class="form-control" placeholder="Publisher" id="publisher">
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col">
-                    <input type="number" v-model="bookForm.pages" class="form-control" placeholder="Page count" id="pages">
-                  </div>
-                  <div class="col" id="form">
-                    <input type="number" step="0.01" v-model="bookForm.msrp" class="form-control" placeholder="MSRP" id="msrp">
-                  </div>
-              </div>
-              <button class="btn btn1" type="submit">Submit</button>
-            </form> 
+            </div>
+            <div class="row">
+                <div class="col">
+                  <input type="number" v-model="bookForm.pages" class="form-control" placeholder="Page count" id="pages">
+                </div>
+                <div class="col" id="form">
+                  <input type="number" step="0.01" v-model="bookForm.msrp" class="form-control" placeholder="MSRP" id="msrp">
+                </div>
+            </div>
+            <button class="btn btn1" type="submit">Submit</button>
+          </form> 
         </div>
       </div>
     </div>
