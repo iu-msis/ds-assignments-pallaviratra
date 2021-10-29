@@ -62,3 +62,7 @@ a:link {
     color: white;
     text-align: right;
 }
+
+button {
+    padding: 10px;
+}
