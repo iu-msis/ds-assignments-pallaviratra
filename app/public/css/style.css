@@ -37,6 +37,7 @@ body {
 .btn1 {
     background-color: #990000;
     color: white;
+    margin-right: 10px;
 }
   
 .btn1:active, .btn1:hover, .btn1:focus {
@@ -63,6 +64,8 @@ a:link {
     text-align: right;
 }
 
-button {
-    padding: 10px;
+.btn-sm {
+    margin-right: 10px;
+    color: #990000;
+    border-color: #990000;
 }
